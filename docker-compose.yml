@@ -23,7 +23,7 @@ services:
       - "15672:15672"
 
   backbtg:
-    image: desafio-btg-back
+    image: gusttadev/desafio-btg-back:latest
     environment:
       spring_rabbitmq_host: rabbitmq
       spring_datasource_url: jdbc:postgresql://db:5432/btg_pactual
