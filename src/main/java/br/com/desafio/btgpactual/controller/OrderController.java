@@ -28,13 +28,13 @@ public class OrderController {
         return ResponseEntity.ok(orderService.searchTotalOrderValue(orderCode));
     }
 
-    @GetMapping("/{customerCode}/quantityOrder")
+    @GetMapping("/customer/{customerCode}/quantityOrder")
     @Operation(summary = "Obtém a quantitdade de pedidos por cliente")
     public ResponseEntity<Long> quantityOrderByCustomer(@PathVariable Long customerCode) {
         return ResponseEntity.ok(orderService.quantityOrderByCustomer(customerCode));
     }
 
-    @GetMapping("/{customerCode}/totalOrders")
+    @GetMapping("/customer/{customerCode}/totalOrders")
     @Operation(summary = "Lista de todos os pedidos referente a um cliente")
     public ResponseEntity<List<Order>> getAllOrdersByCustomer(@PathVariable Long customerCode) {
         return ResponseEntity.ok(orderService.getAllOrdersByCustomer(customerCode));
