@@ -6,6 +6,14 @@
 ### ER Diagrama:
 ![](bd.jpg)
 
+### Docker Hub
+
+- https://hub.docker.com/repository/docker/gusttadev/desafio-btg-back/general
+
+### Github
+
+- https://github.com/GusttaDev/desafio-btg
+
 ### Stack utilizadas:
 
 - JAVA 17 (https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
@@ -13,7 +21,7 @@
 - RABBITMQ (https://www.rabbitmq.com/)
 - POSTGRES (https://www.postgresql.org/)
 
-#### Subindo os containers
+#### Subindo os containers com Postgres, RabbitMQ e o back-end da aplicação
 - docker-compose up -d
 
 #### Parar container
@@ -46,7 +54,7 @@
 - Quantidade de Pedidos por Cliente
 - Lista de pedidos realizados por cliente
 
-### URL Base:
+### URL Base dos endpoints:
 
 - http://localhost:8081/api/orders/
 

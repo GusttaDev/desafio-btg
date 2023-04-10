@@ -3,6 +3,7 @@ version: "3.9"
 services:
   db:
     image: postgres
+    container_name: db
     restart: always
     environment:
       POSTGRES_USER: postgres
@@ -12,6 +13,7 @@ services:
 
   rabbitmq:
     image: rabbitmq:3-management
+    container_name: rabbitmq
     restart: always
     environment:
       RABBITMQ_DEFAULT_USER: guest
@@ -19,3 +21,11 @@ services:
     ports:
       - "5672:5672"
       - "15672:15672"
+
+  backbtg:
+    image: desafio-btg-back
+    environment:
+      spring_rabbitmq_host: rabbitmq
+      spring_datasource_url: jdbc:postgresql://db:5432/btg_pactual
+    ports:
+      - "8081:8081"
