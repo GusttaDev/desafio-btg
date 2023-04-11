@@ -8,6 +8,8 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: admin
+    volumes:
+      - ./create-database.sql:/docker-entrypoint-initdb.d/create-database.sql
     ports:
       - "5432:5432"
 
