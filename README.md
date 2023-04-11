@@ -66,5 +66,6 @@
 
 - Repensar a aplicação para gerar novos microserviços ou até mesmo nova arquitetura estrutural
 - Utilização de BDD/TDD
+- Utilizar a DLQ rabbit criada para futuros erros gerados
 - Realizar teste de regreção, A/B e stress
 - Construção de pipeline automatizada
